@@ -1,0 +1,25 @@
+#include 'TOTVS.CH'
+#include 'PROTHEUS.CH'
+
+User Function zTButton()
+local oDgl1
+local oButton1
+local oButton2
+local oButton3
+local oButton4
+local oButton5
+local cTituloJanela := "utilitario do Protheus"
+
+oDgl1  := TDialog():New(0,0,500,500,cTituloJanela,,,,,CLR_BLACK,CLR_WHITE,,,.T.)
+
+
+oButton1 := TButton():New( 20, 20, "Clientes",oDgl1,{|| Mata030()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.) 
+oButton2 := TButton():New( 40, 40, "Fornecedores",oDgl1,{|| Mata020()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.) 
+oButton3 := TButton():New( 60, 60, "bancos",oDgl1,{|| Mata070()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.) 
+oButton4 := TButton():New( 80, 80, "Produtos",oDgl1,{|| Mata010()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.) 
+oButton5 := TButton():New( 100, 250, "Fechar",oDgl1,{|| oDgl1:End()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.) 
+
+
+oDgl1:Activate(,,,.F.)
+
+return

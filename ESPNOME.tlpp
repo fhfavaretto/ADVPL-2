@@ -1,0 +1,6 @@
+#include 'TOTVS.CH'
+
+User Function ESPNOME()
+cRet := "ADVPL II"
+
+return cRet

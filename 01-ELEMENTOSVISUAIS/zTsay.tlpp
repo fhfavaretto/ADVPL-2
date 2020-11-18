@@ -1,0 +1,41 @@
+#include 'TOTVS.CH'
+#include 'PROTHEUS.CH'
+
+User Function zTsay()
+
+
+local oDgl1
+local oButton1
+local oButton2
+local oButton3
+local oButton4
+local oButton5
+local cTituloJanela := "utilitario do Protheus"
+local oSay1, oSay2, oSay3, oSay4, oSay5, oSay6
+
+
+oDgl1  := TDialog():New(0,0,500,500,cTituloJanela,,,,,CLR_BLACK,CLR_WHITE,,,.T.)
+    oSay6 := TSay():New(10,10,{||'Menu de Cadastros'},oDgl1,,,,,,.T.,CLR_BLUE,CLR_WHITE,300,20)
+
+
+
+oButton1 := TButton():New( 20, 20, "Clientes",oDgl1,{|| Mata030()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.)
+    oSay1 := TSay():New(20,80,{||'Clique aqui para abrir a tela cadastro de Clientes'},oDgl1,,,,,,.T.,CLR_RED,CLR_WHITE,300,20)
+
+oButton2 := TButton():New( 40, 40, "Fornecedores",oDgl1,{|| Mata020()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.)
+    oSay2 := TSay():New(40,90,{||'Clique aqui para abrir a tela cadastro de Fornecedores'},oDgl1,,,,,,.T.,CLR_RED,CLR_WHITE,300,20)
+
+oButton3 := TButton():New( 60, 60, "bancos",oDgl1,{|| Mata070()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.) 
+    oSay3 := TSay():New(60,110,{||'Clique aqui para abrir a tela de Bancos'},oDgl1,,,,,,.T.,CLR_RED,CLR_WHITE,300,20)
+
+oButton4 := TButton():New( 80, 80, "Produtos",oDgl1,{|| Mata010()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.) 
+    oSay4 := TSay():New(80,130,{||'Clique aqui para abrir a tela de cadastro de produtos'},oDgl1,,,,,,.T.,CLR_RED,CLR_WHITE,300,20)
+
+
+oButton5 := TButton():New( 100, 250, "Fechar",oDgl1,{|| oDgl1:End()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.) 
+    oSay5 := TSay():New(100,300,{||'Clique aqui para fechar a tela'},oDgl1,,,,,,.T.,CLR_RED,CLR_WHITE,300,20)
+
+
+oDgl1:Activate(,,,.F.)
+
+return

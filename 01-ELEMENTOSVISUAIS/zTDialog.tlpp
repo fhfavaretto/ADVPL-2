@@ -1,0 +1,11 @@
+#include 'totvs.ch'
+#include 'protheus.ch'
+
+User Function zTDialog()
+local oDgl1
+
+oDgl1 := TDialog():New(180,180,550,700,'cadastro de protheuzeiro',,,,,CLR_BLACK,CLR_WHITE,,,.T.)
+
+oDgl1:Activate(,,,)
+
+return
