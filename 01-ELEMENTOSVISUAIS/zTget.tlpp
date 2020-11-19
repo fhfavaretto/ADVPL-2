@@ -1,0 +1,17 @@
+#include 'TOTVS.CH'
+#include 'PROTHEUS.CH'
+
+
+
+User Function zTegt()
+Local oDlg1
+local oSay1
+local oButton1
+
+
+cGet1
+
+
+
+
+return
