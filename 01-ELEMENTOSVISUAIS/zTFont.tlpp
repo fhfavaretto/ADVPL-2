@@ -1,0 +1,46 @@
+#include 'TOTVS.CH'
+#include 'Protheus.ch'
+
+/*/{Protheus.doc} zTFont
+Fonte criado com o intuito de aprender os componentes visuais do ADVPL
+@type function
+@version 
+@author Placido
+@since 22/09/2020
+@return return_type, return_description
+@see https://tdn.totvs.com/display/tec/TFont%3ANew
+@see https://tdn.totvs.com/display/tec/Construtor+TDialog%3ANew
+@see https://tdn.totvs.com/display/tec/Construtor+TButton%3ACreate
+@see https://tdn.totvs.com/display/tec/TSay
+@see https://tdn.totvs.com/display/tec/TDialog
+/*/
+User Function zTFont()
+Local oDlg1 //Variável que receberá a chamada da classe TDialog
+Local cTituloJanela := "Utililitários do Protheus"
+Local oButton1 //Variável que armazenará a classe do primeiro botão(Se tornando um objeto)
+Local oButton2 //Variável que armazenará  a classe do segundo botão(Se tornando um objeto)
+Local oButton3 //Variável que armazenará  a classe do terceiro botão
+Local oButton4
+Local oButton5
+Local oSay1, oSay2, oSay3,oSay4,oSay5
+Local oFont1 //Fonte para as says 
+Local oFont2 //Fonte para os botões
+
+oDlg1       := TDialog():New(0,0,500,500,cTituloJanela,,,,,CLR_BLACK,CLR_WHITE,,,.T.)
+//PARAMETROS                1         2   3  4   5  6  7  8  9  10   11
+oFont1 := TFont():New('Comic Sans MS',  , 16,  ,.T., ,  ,  ,  ,.T., .T.)
+oFont2 := TFont():New('Arial Black',,12,,.F.,,,,,.F.,.F.)
+
+
+oButton1    := TButton():New(20, 20, "Clientes",    oDlg1,{|| Mata030()}, 40,15,,oFont2,.F.,.T.,.F.,,.F.,,,.F. ) // Chama tela de Clientes
+oSay1       := TSay():New(25,65,{||'Clique aqui para abrir a tela de clientes'},oDlg1,,oFont1,,,,.T.,CLR_BLUE,CLR_WHITE,300,20)
+
+oButton2    := TButton():New(40, 40, "Fornecedores",oDlg1,{|| Mata020()}, 40,15,,oFont2,.F.,.T.,.F.,,.F.,,,.F. )  //Chama tela de Fornecedores
+oSay2       := TSay():New(45,95,{||'Clique aqui para abrir a tela de fornecedores'},oDlg1,,oFont1,,,,.T.,CLR_BLUE,CLR_WHITE,300,20)
+
+oButton3    := TButton():New(60, 60, "Bancos",      oDlg1,{|| Mata070()}, 40,15,,,.F.,.T.,.F.,,.F.,,,.F. )  //Chama tela de Bancos
+oButton4    := TButton():New(80, 80, "Produtos",    oDlg1,{|| Mata010()}, 40,15,,,.F.,.T.,.F.,,.F.,,,.F. )  //Chama tela de Bancos
+oButton5    := TButton():New(100, 100, "FECHAR",    oDlg1,{|| oDlg1:End()}, 40,15,,,.F.,.T.,.F.,,.F.,,,.F. )  //Fechar a aplicação   
+
+oDlg1:Activate(,,,.F.)
+return 
