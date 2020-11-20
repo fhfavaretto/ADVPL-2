@@ -1,6 +1,8 @@
 #include 'TOTVS.CH'
 #include 'PROTHEUS.CH'
 
+
+
 User Function zTButton()
 local oDgl1
 local oButton1
