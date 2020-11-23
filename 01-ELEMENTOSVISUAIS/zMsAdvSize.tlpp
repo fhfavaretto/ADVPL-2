@@ -17,7 +17,7 @@ na elaboração de telas com componentes visuais, com foco na função MsAdvSize
 /*/
 User Function zMsAdvsize()
 Local oDlg1 //Variável que receberá a chamada da classe TDialog
-Local cTituloJanela := "Utililit�rios do Protheus"
+Local cTituloJanela := "Utililit�rios do Protheus"
 Local oButton1 //Variável que armazenará a classe do primeiro botão(Se tornando um objeto)
 Local oButton2 //Variável que armazenará  a classe do segundo botão(Se tornando um objeto)
 Local oButton3 //Variável que armazenará  a classe do terceiro botão
