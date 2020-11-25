@@ -34,6 +34,7 @@ oButton1 := TButton():New( 20, 20, "Clientes",oDgl1,{|| Mata030()}, 40,10,,,.F.,
 
 oButton2 := TButton():New( 40, 40, "Fornecedores",oDgl1,{|| Mata020()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.)
     oSay2 := TSay():New(40,90,{||'Clique aqui para abrir a tela cadastro de Fornecedores'},oDgl1,,,,,,.T.,CLR_RED,CLR_WHITE,300,20)
+ 
 
 oButton3 := TButton():New( 60, 60, "bancos",oDgl1,{|| Mata070()}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F.) 
     oSay3 := TSay():New(60,110,{||'Clique aqui para abrir a tela de Bancos'},oDgl1,,,,,,.T.,CLR_RED,CLR_WHITE,300,20)

@@ -3,15 +3,25 @@
 
 
 
-User Function zTegt()
+User Function zTget()
 Local oDlg1
+Local aSize := MsAdvsize() //FunÃ§Ã£o interna que retorna um array com as coordenadas/dimensoes da tela
 local oSay1
 local oButton1
 
+//começamos aqui a construção do Tget
 
-cGet1
+local cGet1 := Space(15)  //variavel que captura o que for digitado
+local oGet1 //variavel responsavel por receber o constrtutor/classe TGet
 
 
+oDlg1       := TDialog():New(aSize[7],aSize[1],aSize[6],aSize[5],"Aprendendo a usar o TGet",,,,,CLR_BLACK,CLR_WHITE,,,.T.)
+oSay1       := TSay():New(10,10,{||'Digite o seu nome'},oDlg1,,,,,,.T.,CLR_BLUE,CLR_WHITE,300,20)
+oGet1       := TGet():New(30,10,{|u| if( Pcount( )>0, cGet1 := u,oGet1  ) },oDlg1,60,10,"@!",,0,,,.F.,,.T.,,.F.,,.F.,.F.,,.F.,.F.,,cGet1,,,, )
 
+
+oButton1    := TButton():New(50, 10,"Mostrar Nome", oDlg1,{|| MsgInfo(cGet1,"Conteudo Digitado" )}, 60,15,,,.F.,.T.,.F.,,.F.,,,.F. ) 
+
+oDlg1:Activate(,,,.F.)
 
 return
