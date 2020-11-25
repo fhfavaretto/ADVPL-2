@@ -49,3 +49,5 @@ oButton5 := TButton():New( 100, 250, "Fechar",oDgl1,{|| oDgl1:End()}, 40,10,,,.F
 oDgl1:Activate(,,,.F.)
 
 return
+
+
