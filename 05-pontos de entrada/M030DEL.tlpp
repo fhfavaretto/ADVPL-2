@@ -1,0 +1,19 @@
+#include 'protheus.ch'
+
+User Function M030DEL()
+
+local LRet := .T. // se true deixa excluir
+local aArea := GetArea()
+
+If SA1->A1_PESSOA = "J"
+    Alert("nao e possivel excluir o cliente,PESSOA JURICA")
+    LRet := .F.
+EndIf
+
+
+
+
+
+
+
+return(LRet)

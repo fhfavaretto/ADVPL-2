@@ -1,0 +1,17 @@
+#Include 'protheus.ch'
+
+
+User Function M030INC()
+Local aArea := GetArea() //abre a area SA1
+
+If PARAMIXB <> 3
+    MsgInfo("vc acabou de inserir com sucesso o cliente:"+Chr(10)+Chr(13)+;
+    M->A1_NOME)
+
+    RecLock("SA1",.F.)
+        SA1->A1_XUSRINC := RetCodUsr()
+    MsUnlock()
+EndIf
+
+RestArea(aArea) //libera a area
+return

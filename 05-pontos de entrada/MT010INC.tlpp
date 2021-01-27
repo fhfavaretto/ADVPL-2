@@ -1,0 +1,14 @@
+//Bibliotecas
+#Include "Protheus.ch"
+ 
+/*------------------------------------------------------------------------------------------------------*
+ | P.E.:  MT010INC                                                                                      |
+ | Desc:  Ponto de entrada após inclusão do produto                                                     |
+ | Link:  http://tdn.totvs.com/pages/releaseview.action?pageId=6087685                                  |
+ *------------------------------------------------------------------------------------------------------*/
+ 
+User Function MT010INC()
+  
+  MsgInfo("O ponto de entrada para cadastros de produtos funciona yeeeees")
+
+Return
