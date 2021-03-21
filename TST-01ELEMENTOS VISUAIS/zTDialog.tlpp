@@ -1,0 +1,16 @@
+#include "totvs.ch"
+#include "protheus.ch"
+
+// documentação 
+//  https://tdn.totvs.com/display/tec/Construtor+TDialog%3ANew
+
+
+User Function zTDialog()
+Local oDgl1 //variavel que recebera a chamada da classe tDialog
+
+oDgl1 := TDialog():New(180,180,550,700,'Facilitador SIGACOM(COMPRAS)',,,,,CLR_BLACK,CLR_WHITE,,,.T.)
+
+oDgl1:Activate(,,,)
+
+
+return

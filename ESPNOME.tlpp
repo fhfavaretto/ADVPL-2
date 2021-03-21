@@ -1,6 +1,6 @@
 #include 'TOTVS.CH'
 
 User Function ESPNOME()
-cRet := "ADVPL II"
+cRet := "Desenvolvimento"
 
 return cRet

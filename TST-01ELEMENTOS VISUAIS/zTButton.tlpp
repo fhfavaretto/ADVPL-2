@@ -1,0 +1,29 @@
+#include 'totvs.ch'
+#include 'protheus.ch'
+
+//documentação
+// https://tdn.totvs.com/display/tec/TButton
+
+User Function zTButton()
+Local oDgl1 //variavel que recebera a chamada da classe tDialog
+local oButton1 // variavel que recebe o objeto botao 
+local oButton2
+
+oDgl1 := TDialog():New(0,0,500,500,'Facilitador SIGACOM(COMPRAS)',,,,,CLR_BLACK,CLR_WHITE,,,.T.)
+
+/*
+1- coordenada vertical
+2- coordenada horizontal
+3- titulo do button
+4- elemento onde ele sera fixado
+5- ação ao clica no mouse
+ */
+
+oTButton1 := TButton():New( 20, 50, "PC",oDgl1,{||alert("Pedido de Compras")}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F. )   
+oTButton2 := TButton():New( 20, 50, "SC",oDgl1,{||alert("Solicitação de Compras")}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F. ) 
+
+
+oDgl1:Activate(,,,.T.)
+
+
+return 
