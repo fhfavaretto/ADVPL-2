@@ -8,11 +8,11 @@ User Function zTButton()
 Local oDgl1 //variavel que recebera a chamada da classe tDialog
 local cTituloJanela := "UTILITARIO - COMPRAS"
 local oTButton1  // variavel que recebe o objeto botao 
-local oTButton2
-local oTButton3
-local oTButton4  
-local oTButton5
-local oTButton6
+local oTButton2  // variavel que recebe o objeto botao 
+local oTButton3  // variavel que recebe o objeto botao 
+local oTButton4  // variavel que recebe o objeto botao 
+local oTButton5  // variavel que recebe o objeto botao 
+local oTButton6  // variavel que recebe o objeto botao 
 
 oDgl1 := TDialog():New(0,0,500,500,cTituloJanela,,,,,CLR_BLACK,CLR_WHITE,,,.T.)
 
@@ -31,12 +31,17 @@ oTButton2 := TButton():New( 60, 100,"Gerar Cotação",oDgl1,{||Mata131()}, 70,20,,
 oTButton3 := TButton():New( 90, 100,"Atualiza Cotação",oDgl1,{||Mata150()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
 oTButton4 := TButton():New( 120, 100,"Analisa Cotação",oDgl1,{||Mata161()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )   
 oTButton5 := TButton():New( 150,100, "Pedido de compras",oDgl1,{||Mata110()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
-oTButton6 := TButton():New( 180,100, "Fluig",oDgl1,{|| u_zTst()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. ) 
+oTButton6 := TButton():New( 180,100, "Fluig",oDgl1,{|| aBrirFluig()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. ) 
 oTButton7 := TButton():New( 210,100, "Fechar",oDgl1,{|| oDgl1:End()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. ) 
+
+oDgl1:Activate(,,,.T.) // parametro para ativar a tela marcada como .T. para centralizar no meio
+
+//função static que abre o fluig
+Static Function aBrirFluig()
+    // Exemplo de uso para Windows
+    ShellExecute( "open", "http://172.16.0.10:8080", "", "", 1 )
  
-
-
-oDgl1:Activate(,,,.T.)
-
+return
+//fim da função static
 
 return 
