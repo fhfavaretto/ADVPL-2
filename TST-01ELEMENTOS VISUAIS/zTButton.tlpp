@@ -6,10 +6,12 @@
 
 User Function zTButton()
 Local oDgl1 //variavel que recebera a chamada da classe tDialog
-local oButton1 // variavel que recebe o objeto botao 
-local oButton2
+local cTituloJanela := "Utilitarios - Compras"
+local oTButton1  // variavel que recebe o objeto botao 
+local oTButton2
+local oTButton3
 
-oDgl1 := TDialog():New(0,0,500,500,'Facilitador SIGACOM(COMPRAS)',,,,,CLR_BLACK,CLR_WHITE,,,.T.)
+oDgl1 := TDialog():New(0,0,500,500,cTituloJanela,,,,,CLR_BLACK,CLR_WHITE,,,.T.)
 
 /*
 1- coordenada vertical
@@ -17,13 +19,17 @@ oDgl1 := TDialog():New(0,0,500,500,'Facilitador SIGACOM(COMPRAS)',,,,,CLR_BLACK,
 3- titulo do button
 4- elemento onde ele sera fixado
 5- ação ao clica no mouse
+6- largura botao 
+7- altura botao
  */
 
-oTButton1 := TButton():New( 20, 50, "PC",oDgl1,{||alert("Pedido de Compras")}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F. )   
-oTButton2 := TButton():New( 20, 50, "SC",oDgl1,{||alert("Solicitação de Compras")}, 40,10,,,.F.,.T.,.F.,,.F.,,,.F. ) 
+oTButton1 := TButton():New( 20, 50,"Pedido de Compras",oDgl1,{|| Mata121()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )   
+oTButton2 := TButton():New( 45, 50, "Solicitação de Compras",oDgl1,{|| Mata110()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
+oTButton3 := TButton():New( 66, 50, "Fechar",oDgl1,{|| oDgl1:End()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. ) 
+ 
 
 
-oDgl1:Activate(,,,.T.)
+oDgl1:Activate(,,,)
 
 
 return 
