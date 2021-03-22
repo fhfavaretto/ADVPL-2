@@ -6,10 +6,13 @@
 
 User Function zTButton()
 Local oDgl1 //variavel que recebera a chamada da classe tDialog
-local cTituloJanela := "Utilitarios - Compras"
+local cTituloJanela := "UTILITARIO - COMPRAS"
 local oTButton1  // variavel que recebe o objeto botao 
 local oTButton2
 local oTButton3
+local oTButton4  
+local oTButton5
+local oTButton6
 
 oDgl1 := TDialog():New(0,0,500,500,cTituloJanela,,,,,CLR_BLACK,CLR_WHITE,,,.T.)
 
@@ -23,13 +26,17 @@ oDgl1 := TDialog():New(0,0,500,500,cTituloJanela,,,,,CLR_BLACK,CLR_WHITE,,,.T.)
 7- altura botao
  */
 
-oTButton1 := TButton():New( 20, 50,"Pedido de Compras",oDgl1,{|| Mata121()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )   
-oTButton2 := TButton():New( 45, 50, "Solicitação de Compras",oDgl1,{|| Mata110()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
-oTButton3 := TButton():New( 66, 50, "Fechar",oDgl1,{|| oDgl1:End()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. ) 
+oTButton1 := TButton():New( 30, 100,"Solicitação de Compras",oDgl1,{||Mata121()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
+oTButton2 := TButton():New( 60, 100,"Gerar Cotação",oDgl1,{||Mata131()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
+oTButton3 := TButton():New( 90, 100,"Atualiza Cotação",oDgl1,{||Mata150()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
+oTButton4 := TButton():New( 120, 100,"Analisa Cotação",oDgl1,{||Mata161()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )   
+oTButton5 := TButton():New( 150,100, "Pedido de compras",oDgl1,{||Mata110()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
+oTButton6 := TButton():New( 180,100, "Fluig",oDgl1,{|| u_zTst()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. ) 
+oTButton7 := TButton():New( 210,100, "Fechar",oDgl1,{|| oDgl1:End()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. ) 
  
 
 
-oDgl1:Activate(,,,)
+oDgl1:Activate(,,,.T.)
 
 
 return 

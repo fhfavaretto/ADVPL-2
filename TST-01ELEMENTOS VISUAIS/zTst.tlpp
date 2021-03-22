@@ -1,0 +1,7 @@
+#INCLUDE "TOTVS.CH"
+ 
+User Function zTst()
+    // Exemplo de uso para Windows
+    ShellExecute( "open", "http://172.16.0.10:8080", "", "", 1 )
+ 
+return
