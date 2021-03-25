@@ -1,0 +1,62 @@
+#include 'totvs.ch'
+#include 'protheus.ch'
+
+//documentação
+// https://tdn.totvs.com/display/tec/Construtor+TSay%3ANew
+
+
+User Function zMsAdvsize()
+Local oDgl1 //variavel que recebera a chamada da classe tDialog
+local cTituloJanela := "UTILITARIO - COMPRAS"
+local oTButton1  // variavel que recebe o objeto botao 
+local oTButton2  // variavel que recebe o objeto botao 
+local oTButton3  // variavel que recebe o objeto botao 
+local oTButton4  // variavel que recebe o objeto botao 
+local oTButton5  // variavel que recebe o objeto botao 
+local oTButton6  // variavel que recebe o objeto botao 
+local oSay1      // variavel que armazera a say 
+local oSaySize
+local aSize  := MsAdvsize() //função interna que retorna as um array com as dimensoes/ coordenadas da tela
+local cSize7, cSize1, cSize6, cSize5
+
+
+cSize7 := cValToChar(aSize[7])
+cSize1 := cValToChar(aSize[1])
+cSize6 := cValToChar(aSize[6])
+cSize5 := cValToChar(aSize[5])
+
+
+oDgl1 := TDialog():New(aSize[7],aSize[1],aSize[6],aSize[5],cTituloJanela,,,,,CLR_BLACK,CLR_WHITE,,,.T.)
+
+/*
+1- coordenada vertical
+2- coordenada horizontal
+3- titulo do button
+4- elemento onde ele sera fixado
+5- ação ao clica no mouse
+6- largura botao 
+7- altura botao
+ */
+oSay1     := TSay():New(05,50,{||'Tela utilitaria para o protheus'},oDgl1,,oFont,,,,.T.,CLR_RED,CLR_WHITE,200,20) //titulo (pode colocar em qualquer lugar desde que ja alinhado)
+
+oTButton1 := TButton():New( 30, 100,"Solicitação de Compras",oDgl1,{||Mata121()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
+oTButton2 := TButton():New( 60, 100,"Gerar Cotação",oDgl1,{||Mata131()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
+oTButton3 := TButton():New( 90, 100,"Atualiza Cotação",oDgl1,{||Mata150()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
+oTButton4 := TButton():New( 120, 100,"Analisa Cotação",oDgl1,{||Mata161()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )   
+oTButton5 := TButton():New( 150,100, "Pedido de compras",oDgl1,{||Mata110()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. )
+oTButton6 := TButton():New( 180,100, "Fluig",oDgl1,{|| aBrirFluig()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. ) 
+oTButton7 := TButton():New( 210,100, "Fechar",oDgl1,{|| oDgl1:End()}, 70,20,,,.F.,.T.,.F.,,.F.,,,.F. ) 
+
+oSaySize := TSay():New(120,20,{|| cSize7+"  "+cSize1+"  "+cSize6+"  "+cSize5},oDgl1,,oFont,,,,.T.,CLR_RED,CLR_WHITE,400,20) //titulo (pode colocar em qualquer lugar desde que ja alinhado)
+
+oDgl1:Activate(,,,.T.) // parametro para ativar a tela marcada como .T. para centralizar no meio
+
+//função static que abre o fluig
+Static Function aBrirFluig()
+    // Exemplo de uso para Windows
+    ShellExecute( "open", "http://172.16.0.10:8080", "", "", 1 )
+ 
+return
+//fim da função static
+
+return 

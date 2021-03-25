@@ -1,6 +1,0 @@
-#include 'TOTVS.CH'
-
-User Function ESPNOME()
-cRet := "Desenvolvimento"
-
-return cRet
