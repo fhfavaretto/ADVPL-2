@@ -2,7 +2,7 @@
 #include 'protheus.ch'
 
 //documentação
-// https://tdn.totvs.com/display/tec/Construtor+TSay%3ANew
+//https://efacildemais.blogspot.com/2011/06/msadvsize-dimensionamento-de-janelas-no.html
 
 
 User Function zMsAdvsize()
